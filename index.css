@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Mooli&family=Pacifico&family=Pixelify+Sans&family=Poppins:ital,wght@0,200;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600&family=Quicksand:wght@700&family=Roboto:ital,wght@0,100;0,300;0,700;1,400;1,500;1,700;1,900&family=Rubik:wght@800&family=Ubuntu:ital,wght@0,500;1,400&display=swap');
+*{
+  scroll-behavior: smooth;
+  font-family: 'Pixelify Sans', sans-serif;
+}
+body{
+  background-color: rgb(29, 29, 31);
+  display: flex;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+.button{
+  position: absolute;
+  top: 900px;
+  left: 955px;
+  perspective: 800;
+  
+  transition:all 0.1s ease;
+  border: none;
+  cursor: pointer;
+  border: white;
+  background-color: greenyellow;
+}
+.button::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #357a38; /* Darker color for the "depth" */
+  transform: rotateX(45deg) translateY(20px);
+  
+  opacity: 0.8;
+ 
+}
+.button:active{
+  background-color: lightblue;
+  z-index:5;
+  transition: all 0.4s ease;
+  transform:translateY(12px);
+}
+.button:active::before{
+  background-color: lightblue;
+  z-index:1;
+  transition: all 0.4s ease;
+  transform: rotateX(45deg) translateY(2px);
+  
+}
+#score{
+  position: absolute;
+  top:60px;
+  left: 1305px;
+}
+#gameCanvas{
+  border: 1px solid rgb(0, 0, 0);
+  background: linear-gradient(rgba(0, 0, 0, 0.466), rgba(128, 128, 128, 0.256)),url(images3/dungeon.jpg);
+  background-position: center;
+ 
+}
+#gameCanvas2{
+  background:linear-gradient(rgba(0, 0, 0, 0.11), rgba(128, 128, 128, 0.094)), url(images3/sun.jpg);
+  transition: 2s ease;
+  position: absolute;
+  background-color: rgba(255, 0, 0, 0.346);
+  display: none;
+}
+#image1{
+  height: 200px;
+}
+#game{
+  position: absolute;
+  top: 380px;
+  font-size: 5rem;
+  transition: 0.8s ease;
+  color: red;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.506);
+}
+#upbtn{
+  position: absolute;
+   top: 600px;
+  font-size: 3rem;
+  left: 1650px;
+  color: rgb(0, 0, 0);
+  border: none;
+  background-color: rgb(53, 53, 66);
+  cursor: pointer;
+  perspective: 900;
+  transition: 0.4s ease;
+}
+#upbtn:active{
+  transition: 0.2s ease;
+  background-color: crimson;
+}
+.upbtn{
+  transition: 0.2s ease;
+  background-color: crimson;
+}
